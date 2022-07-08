@@ -16,7 +16,10 @@ void setup() {
   wifi_Setup();
   
   IsLdrConnected = (digitalRead(LdrIsLdrConnectedPin) == LOW)? true: false; 
+
+  
   Serial.println(IsLdrConnected);
+
 }
 
 void loop() {
@@ -30,7 +33,7 @@ if(IsLdrConnected) {
   myservo.write(0);
   delay(3000);
 }
-  
+analogWrite(led ,GetData());
  
 }
 
